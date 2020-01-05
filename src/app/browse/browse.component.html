@@ -1,0 +1,14 @@
+<div class="listing-wrapper">
+  <div class="card" style="width: 18rem;" *ngFor="let listing of listings">
+    <img 
+    src="https://images.unsplash.com/photo-1499831215195-0970a54b3a0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" 
+    class="card-img-top" 
+    alt="..."
+    >
+    <div class="card-body">
+      <h5 class="card-title">{{listing.name}}</h5>
+      <p class="card-text">{{listing.description}}</p>
+      <a href="#" class="btn btn-primary">More</a>
+    </div>
+  </div>
+</div>
