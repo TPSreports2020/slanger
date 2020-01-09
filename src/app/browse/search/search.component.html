@@ -1,0 +1,25 @@
+<div class="main-form-wrapper">
+
+  <form  [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <div class="input-group mb-3">
+        <input 
+          type="text" 
+          class="form-control" 
+          formControlName="searchTerm"
+          placeholder="Search" 
+          aria-label="Search Bar" 
+          aria-describedby="searchAddon"
+          id="search">
+        <div class="input-group-append">
+          <button class="btn btn-warning" type="submit" id="searchAddon"><fa-icon [icon]="faSearch"></fa-icon></button>
+        </div>
+      </div>
+  
+    </div>
+
+  </form>
+
+</div>
+

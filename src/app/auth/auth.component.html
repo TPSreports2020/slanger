@@ -1,5 +1,47 @@
-<form >
-  <input type="email">
-  <input type="password">
-  <button>Submit</button>
-</form>
+<div class="row formWrapper">
+  
+  <div class="col mx-auto">
+    <!-- <div class="alert alert-danger" *ngIf="error">
+      <p>{{ error }}</p>
+    </div> -->
+    <alert [message]="error" *ngIf="error" (close)="onHandleError()"></alert>
+    <div *ngIf="loading" style="text-align: center;">
+      <app-spinner></app-spinner>
+    </div>
+    <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!loading">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input 
+        type="email" 
+        id="email" 
+        class="form-control" 
+        name="email" 
+        email ngModel required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input 
+        type="password" 
+        id="password" 
+        class="form-control"  
+        name="password" 
+        ngModel required minlength="6">
+      </div>
+      <div>
+        <button 
+        class="btn btn-info mx-1" 
+        type="submit"
+        [disabled]="authForm.invalid">
+        {{ loginMode ? 'Login' : 'Sign Up'}}
+        </button>
+        <button 
+        class="btn btn-info mx-1" 
+        type="button" 
+        (click)="onSwitchMode()">
+        Switch to {{ loginMode ? 'Sign Up' : 'Login' }}
+        </button>
+      </div>
+    </form>
+  </div>
+
+</div>

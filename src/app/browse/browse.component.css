@@ -1,5 +1,16 @@
 .listing-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 2rem;
+  display:flex; 
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 1rem 0;
+}
+
+.card-btns {
+  margin-left: 1.5rem;
+}
+
+.card button {
+  font-weight: 600;
 }

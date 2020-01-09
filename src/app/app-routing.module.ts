@@ -3,6 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { BrowseComponent } from './browse/browse.component';
 import { ErrorPageComponent } from './shared/error-page.component';
 import { AuthComponent } from './auth/auth.component';
+import { PostFormComponent } from './post-form/post-form.component';
+import { SavedComponent } from './saved/saved.component';
+import { AccountComponent } from './account/account.component';
 
 const appRoutes: Routes = [
   {
@@ -19,6 +22,18 @@ const appRoutes: Routes = [
   {
     path: 'auth',
     component: AuthComponent
+  },
+  {
+    path: 'post',
+    component: PostFormComponent
+  },
+  {
+    path: 'saved',
+    component: SavedComponent
+  },
+  {
+    path: 'account',
+    component: AccountComponent
   },
   {
     path: 'not-found',
