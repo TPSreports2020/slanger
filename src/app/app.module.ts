@@ -23,7 +23,7 @@ import { AccountComponent } from './account/account.component';
 import { ShowListingInfoComponent } from './show-listing-info/show-listing-info.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, NgbModule, AppRoutingModule, ReactiveFormsModule, FontAwesomeModule ],
+  imports:      [ BrowserModule, FormsModule, NgbModule, AppRoutingModule, ReactiveFormsModule, FontAwesomeModule, HttpClientModule ],
   declarations: [ AppComponent, HeaderComponent, BrowseComponent, AuthComponent, ErrorPageComponent, SearchComponent, AlertComponent, SpinnerComponent, PostFormComponent, SavedComponent, AccountComponent, ShowListingInfoComponent ],
   bootstrap:    [ AppComponent ],
   providers: [AuthService]

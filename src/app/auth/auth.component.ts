@@ -12,17 +12,54 @@ import { AuthService, AuthResponseData } from './auth.service';
   styleUrls: ['./auth.component.css']
 })
 export class AuthComponent implements OnInit {
+  constructor(
+    private authService: AuthService, 
+    private router: Router
+    ) { }
+
   loginMode = true;
   loading = false;
   error: string = null;
 
-  constructor() { }
-
   ngOnInit() {
+  }
+
+  onHandleError() {
+    this.error = null;
   }
 
   onSwitchMode() {
     this.loginMode = !this.loginMode;
+  }
+
+  onSubmit(form: NgForm) {
+    if (!form.valid) {
+      return;
+    }
+    const email = form.value.email;
+    const password = form.value.password;
+
+    let authObs: Observable<AuthResponseData>;
+    this.loading = true;
+
+    if (this.loginMode) {
+      authObs = this.authService.login(email, password);
+    } else { 
+      authObs = this.authService.signUp(email, password);
+    }
+
+    authObs.subscribe(
+      resData => {
+      console.log(resData);
+      this.loading = false;
+      this.router.navigate(['account']);
+      },
+      errorMessage => {
+      this.loading = false;
+      this.error = errorMessage;
+      }
+    );
+    form.reset();
   }
 
 }
