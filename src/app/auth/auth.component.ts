@@ -36,6 +36,7 @@ export class AuthComponent implements OnInit {
     if (!form.valid) {
       return;
     }
+    console.log(form);
     const email = form.value.email;
     const password = form.value.password;
 
@@ -57,6 +58,7 @@ export class AuthComponent implements OnInit {
       errorMessage => {
       this.loading = false;
       this.error = errorMessage;
+      console.log(errorMessage);
       }
     );
     form.reset();

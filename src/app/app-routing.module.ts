@@ -6,6 +6,7 @@ import { AuthComponent } from './auth/auth.component';
 import { PostFormComponent } from './post-form/post-form.component';
 import { SavedComponent } from './saved/saved.component';
 import { AccountComponent } from './account/account.component';
+import { AuthGuard } from './auth/auth.guard';
 
 const appRoutes: Routes = [
   {
@@ -25,15 +26,18 @@ const appRoutes: Routes = [
   },
   {
     path: 'post',
-    component: PostFormComponent
+    component: PostFormComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'saved',
-    component: SavedComponent
+    component: SavedComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'account',
-    component: AccountComponent
+    component: AccountComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'not-found',

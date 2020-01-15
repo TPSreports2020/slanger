@@ -13,19 +13,27 @@
         <label for="email">Email</label>
         <input 
         type="email" 
-        id="email" 
-        class="form-control" 
+        class="form-control shadow-none" 
         name="email" 
-        email ngModel required>
+        email
+        ngModel 
+        required
+        #email="ngModel">
+        <span class="form-text" *ngIf="email.invalid && email.touched">Please enter a valid email!</span>
+         
       </div>
       <div class="form-group">
         <label for="password">Password</label>
         <input 
-        type="password" 
-        id="password" 
-        class="form-control"  
+        type="password"
+        class="form-control shadow-none"  
         name="password" 
-        ngModel required minlength="6">
+        ngModel
+        required 
+        minlength="6"
+        #password="ngModel"
+        >
+        <span class="form-text" *ngIf="password.invalid && password.touched">Password must be at least 6 characters!</span>
       </div>
       <div>
         <button 

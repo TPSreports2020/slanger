@@ -61,7 +61,7 @@ export class AuthService {
 
   signUp(email: string, password: string) {
     return this.http.post<AuthResponseData>(
-      'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAGgsWdheEECow6J9a_rri_rhVFn4DgkQA',
+      `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBCjG1_Po0kc2WY4o0Wnfjun7AmB_cHiu0`,
       {
         email: email,
         password: password,
@@ -81,7 +81,7 @@ export class AuthService {
 
   login(email: string, password: string) {
     return this.http.post<AuthResponseData>(
-      `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAGgsWdheEECow6J9a_rri_rhVFn4DgkQA`,
+      `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBCjG1_Po0kc2WY4o0Wnfjun7AmB_cHiu0`,
       {
         email: email,
         password: password,
@@ -129,7 +129,7 @@ export class AuthService {
   }
 
   autoLogout(expirationDuration: number) {
-    console.log(expirationDuration);
+    // console.log(expirationDuration);
     this.tokenExpirationTimer = setTimeout(() => {
       this.logout();   
     }, expirationDuration);
@@ -137,7 +137,7 @@ export class AuthService {
 
   logout() {
     this.user.next(null);
-    this.router.navigate(['/auth']);
+    this.router.navigate(['/']);
     localStorage.removeItem('userData');
     if (this.tokenExpirationTimer) {
       clearTimeout(this.tokenExpirationTimer);
