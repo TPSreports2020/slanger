@@ -4,7 +4,8 @@
 }
 
 .card {
-  margin: 1rem 0;
+  margin-bottom: 2rem;
+  padding: 0;
 }
 
 .card-btns {
