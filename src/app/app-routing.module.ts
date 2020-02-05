@@ -27,17 +27,17 @@ const appRoutes: Routes = [
   {
     path: 'post',
     component: PostFormComponent,
-    canActivate: [AuthGuard]
+    // canActivate: [AuthGuard]
   },
   {
     path: 'saved',
     component: SavedComponent,
-    canActivate: [AuthGuard]
+    // canActivate: [AuthGuard]
   },
   {
     path: 'account',
     component: AccountComponent,
-    canActivate: [AuthGuard]
+    // canActivate: [AuthGuard]
   },
   {
     path: 'not-found',
