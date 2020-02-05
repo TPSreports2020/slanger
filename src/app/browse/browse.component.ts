@@ -41,9 +41,28 @@ export class BrowseComponent implements OnInit {
       price: 900,
       description: 'Love this guitar but have too many! Like new, model is LPJ20ANN, 60s humbuckers!'
     }
+    ,
+    {
+      name: 'Gibson Les Paul',
+      price: 900,
+      description: 'Love this guitar but have too many! Like new, model is LPJ20ANN, 60s humbuckers!'
+    },
+    {
+      name: 'Gibson Les Paul',
+      price: 900,
+      description: 'Love this guitar but have too many! Like new, model is LPJ20ANN, 60s humbuckers!'
+    },
+    {
+      name: 'Gibson Les Paul',
+      price: 900,
+      description: 'Love this guitar but have too many! Like new, model is LPJ20ANN, 60s humbuckers!'
+    },
+    {
+      name: 'Gibson Les Paul',
+      price: 900,
+      description: 'Love this guitar but have too many! Like new, model is LPJ20ANN, 60s humbuckers!'
+    }
   ]
-
-
 
   ngOnInit() {
   }

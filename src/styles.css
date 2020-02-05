@@ -3,3 +3,9 @@
 body {
   background-color: #e6e6e6;
 }
+
+input[type="text"] {
+outline: none;
+box-shadow:none !important;
+border:1px solid #ccc !important;
+}

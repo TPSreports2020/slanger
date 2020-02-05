@@ -5,13 +5,3 @@
 .checkSpace {
   width: 7px;
 }
-
-.col {
-  background-color: lightpink;
-  border: 2px dashed black;
-}
-
-.row {
-  background-color: lightpurple;
-  border: 2px dashed blue;
-}
