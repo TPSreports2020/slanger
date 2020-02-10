@@ -6,89 +6,114 @@
     *ngIf="img.value">
     <img [src]="img.value" alt="">
   </div>
+</div>
 
 
-  <div class="col formWrapper">
-    <form [formGroup]="sellForm" (ngSubmit)="onSubmit()">
+<div class="col formWrapper">
+  <form [formGroup]="sellForm" (ngSubmit)="onSubmit()">
 
-      <div class="form-group">
-        <label for="name">Listing Name</label>
-        <input 
-          type="text" 
-          id="name" 
-          class="form-control" 
-          formControlName="name"
-          placeholder="Name the item"
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="name">Listing Name</label>
+          <input 
+              type="text" 
+              id="name" 
+              class="form-control" 
+              formControlName="name"
+              placeholder="Name the item"
           >
-      </div>
-
-      <div class="form-group">
-        <label for="imgUrl">Image URL</label>
-        <input 
-          type="text" 
-          id="imgUrl" 
-          class="form-control" 
-          formControlName="imgUrl"
-          placeholder="File uploads coming soon.."
-          #img
-          >
-      </div>
-
-      <div class="row">
-        <div class="col-4">
-
-          <div class="form-group">
-            <label for="imgUrl">Price</label>
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <div class="input-group-text">
-                  <input type="checkbox" aria-label="Checkbox for following text input">
-                  <span class="checkSpace"></span>
-                  Accepting Offers
-                </div>
-                <span class="input-group-text">$</span>
-              </div>
-              <input type="text" class="form-control" aria-label="Text input with checkbox">
-            </div>
           </div>
+      </div>
+    </div>
 
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="imgUrl">Image URL</label>
+          <input 
+              type="text" 
+              id="imgUrl" 
+              class="form-control" 
+              formControlName="imgUrl"
+              placeholder="File uploads coming soon.."
+              #img
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="price">Price</label>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="checkbox" aria-label="Checkbox for following text input">
+                <span class="checkSpace"></span>
+                Accepting Offers
+              </div>
+              <span class="input-group-text">$</span>
+            </div>
+              <input type="number" class="form-control" aria-label="Text input with checkbox">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <label for="shipping">Shipping</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+            <input type="checkbox" aria-label="Checkbox for following text input">
+            <span class="checkSpace"></span>
+            Local Meetup Only
         </div>
         <div class="col">
-          <div class="form-group">
-            <label for="imgUrl">Shipping</label>
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <div class="input-group-text">
-                  <input type="checkbox" aria-label="Checkbox for following text input">
-                  <span class="checkSpace"></span>
-                  Local meetup only
-                </div>
-                <div class="input-group-text">
-                  <input type="checkbox" aria-label="Checkbox for following text input">
-                  <span class="checkSpace"></span>
-                  I'll cover shipping
-                </div>
-                <span class="input-group-text">ZIP Code: </span>
-              </div>
-              <input type="text" class="form-control" aria-label="Text input with checkbox">
-            </div>
-          </div>
+
+            <span class="bigSpace"></span>
+            <input 
+              type="checkbox" 
+              aria-label="Checkbox for following text input"
+              class="mx-auto"
+              >
+            <span class="checkSpace"></span>
+            I'll cover shipping
         </div>
       </div>
+    </div>
+        
+
+      
+  
+
+          
+       
+       
+      
 
       <div class="form-group">
-            <label for="description">Description</label>
-            <textarea 
+        <label for="description">Description</label>
+          <textarea 
               class="form-control" 
               id="description" 
               rows="6" 
               formControlName="description" 
               placeholder="Tell us about the item"
               spellcheck="false"
-              ></textarea>
-          </div>
+            ></textarea>
+      </div>
 
+        <button 
+          class="btn btn-success full-width"
+          type="submit"
+          >
+          Post
+        </button>
     </form>
   </div>
-
-</div>

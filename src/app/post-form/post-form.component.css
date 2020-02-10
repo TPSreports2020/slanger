@@ -1,8 +1,12 @@
 .formWrapper {
   margin-top: 3rem;
+  max-width: 400px;
 }
 
 .checkSpace {
-  width: 7px;
+  width: 10px;
 }
 
+.full-width {
+  width: 100%;
+}
