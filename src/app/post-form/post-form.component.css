@@ -1,6 +1,5 @@
 .formWrapper {
-  margin-top: 3rem;
-  max-width: 400px;
+  margin-top: 1rem;
 }
 
 .checkSpace {
@@ -10,3 +9,21 @@
 .full-width {
   width: 100%;
 }
+
+.flexbox {
+  display: flex;
+}
+
+.flex {
+  flex: 1;
+}
+
+img {
+  height: 190.47;
+  width: 286;
+}
+
+/* .col {
+  background-color: pink;
+  border: 1px dashed orange;
+} */
