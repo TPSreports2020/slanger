@@ -1,0 +1,17 @@
+.listing-wrapper {
+  display:flex; 
+  flex-wrap: wrap;
+}
+
+.card {
+  margin-bottom: 2rem;
+  width: 18rem;
+}
+
+.card-btns {
+  margin-left: 1.5rem;
+}
+
+.card button {
+  font-weight: 600;
+}
