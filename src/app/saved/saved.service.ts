@@ -1,16 +1,19 @@
 import { Injectable } from '@angular/core';
 
 import { Listing } from '../../shared/listing.model';
+import { Subject } from 'rxjs';
 
 
 @Injectable({providedIn: 'root'})
-export class SearchService {
-  constructor(private http: HttpClient){}
+export class SavedService {
+  constructor(){}
 
-  savedListings: Listing[];
+  savedListings: Listing[] = [];
+  savedSub = new Subject<Listing[]>();
 
   saveListing(listing: Listing) {
-    this.savedListings.push(listing);
+    this.savedListings.push({...listing});
+    this.savedSub.next(this.savedListings)
   }
 
 }

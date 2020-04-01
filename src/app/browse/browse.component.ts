@@ -9,7 +9,7 @@ import { SavedService } from '../saved/saved.service';
   styleUrls: ['./browse.component.css']
 })
 export class BrowseComponent implements OnInit {
-  constructor() { }
+  constructor(private savedService: SavedService) { }
   listings: Listing[] = [
     {
       name: 'Gibson Les Paul',
@@ -67,8 +67,8 @@ export class BrowseComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSaveListing(index: number) {
-    
+  onSaveListing(listing: Listing) {
+    this.savedService.saveListing(listing);
   }
 
 }
