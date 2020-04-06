@@ -9,11 +9,17 @@ export class SavedService {
   constructor(){}
 
   savedListings: Listing[] = [];
-  savedSub = new Subject<Listing[]>();
+  savedSubject = new Subject<Listing[]>();
 
   saveListing(listing: Listing) {
     this.savedListings.push({...listing});
-    this.savedSub.next(this.savedListings)
+    this.savedSubject.next(this.savedListings)
+    console.log(this.savedListings);
+    console.log('savedService.saveListing triggered');
+  }
+
+  getSaved() {
+    return this.savedListings;
   }
 
 }
