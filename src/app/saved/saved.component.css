@@ -4,8 +4,8 @@
 }
 
 .card {
-  margin-bottom: 2rem;
-  width: 18rem;
+  /* margin-bottom: 2rem;
+  width: 18rem; */
 }
 
 .card-btns {
@@ -14,4 +14,10 @@
 
 .card button {
   font-weight: 600;
+}
+
+faIcon { size: 3rem; }
+
+.top {
+  margin-top: 40px;
 }
